@@ -64,7 +64,8 @@ A estrutura do site inclui uma página principal (`index.html`) e outras seis p�
 1. Clone o repositório:
   ```bash
   git clone https://github.com/seuusuario/nomedoprojeto.git
-
+  ```
+  
 2.Navegue até a pasta do projeto
   ```bash
   cd nomedoprojeto
