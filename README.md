@@ -62,8 +62,8 @@ A estrutura do site inclui uma página principal (`index.html`) e outras seis p�
 ## Como Executar o Projeto
 
 1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seuusuario/nomedoprojeto.git
+  ```bash
+  git clone https://github.com/seuusuario/nomedoprojeto.git
 
 2.Navegue até a pasta do projeto
   ```bash
