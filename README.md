@@ -74,7 +74,7 @@ A estrutura do site inclui uma página principal (`index.html`) e outras seis p�
 
 ## Autor
 
-Desenvolvido por Rafael como parte de estudos em desenvolvimento web.
+Desenvolvido por Raphael como parte de estudos em desenvolvimento web.
 
 ## Licença
 
