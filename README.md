@@ -65,13 +65,13 @@ A estrutura do site inclui uma página principal (`index.html`) e outras seis p�
   ```bash
   git clone https://github.com/seuusuario/nomedoprojeto.git
   ```
-  
-2.Navegue até a pasta do projeto
+
+2. Navegue até a pasta do projeto
   ```bash
   cd nomedoprojeto
   ```
 
-3.Abra o arquivo index.html em um navegador para visualizar o site.
+3. Abra o arquivo index.html em um navegador para visualizar o site.
   ```bash
   Nota: Este projeto é uma simulação, sem integração com back-end. Portanto, a funcionalidade de login e manipulação de estoque é apenas ilustrativa.
   ```
