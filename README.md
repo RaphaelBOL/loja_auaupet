@@ -26,6 +26,7 @@ A estrutura do site inclui uma página principal (`index.html`) e outras seis p�
 ├── racoes.html              # Página da seção de rações
 ├── script.js                # Arquivo JavaScript com funções AJAX e outras funcionalidades
 └── style.css                # Arquivo CSS para estilização do site
+```
 
 ## Funcionalidades do Site
 
