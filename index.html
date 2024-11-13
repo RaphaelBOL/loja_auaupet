@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!--
+Nosso e-commerce atua no ramo de produtos veterinários e petshop em geral.
+O site está estruturado com a página index sendo a principal e mais 6 páginas cada uma referente a uma seção do site,
+sendo requisitadas via AJAX no menu navegação, a descrição das varíaveis e explicação das funções estão no arquivo scrpit.js.
+
+A página clientelogado realiza as requisições AJAX dos catálogos. É carregada após o preenchimento do formulário, com qualquer e-mail e a senha 1234 (obrigatória para mostrar a funcionalidade de verificação de senha, uma vez que não possui back-end para o registro em si dos tipos de usuários, e exibir ou ocultar a senha digitada);
+
+A página dashboardadm, é acessada com a terminação do e-mail (@auaupet.com) e a senha 1234 (senha obrigatória) simula o acesso à parte do administrador da loja, que através do link estoque no menu, recebe via Ajax o carregamento do estoque dos produtos da loja.
+
+O formulário de cadastro do usuário (cliente), possui requisição da API viacep para buscar as informações do endereço do cliente. além da verificação de senha e também, funções JS para formatar os campos de CEP, telefone e CPF, além de ícone para exibir ou ocultar a senha.
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Au Au Pet - O Shopping do seu Pet</title>
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="divheader">
+      <a href="index.html">
+        <img src="assets/images/logotipo-auaupet.png" alt="Logotipo Au Au Pet" class="logo"> <!-- linkar página padrão -->
+      </a>
+    </div>
+
+    <div class="divheader-input">
+      <div class="input-wrapper">
+        <input class="box-pesquisa" type="text" placeholder="Encontre o produto perfeito para seu pet">
+        <img class="icone-pesquisa" src="assets/images/icone-pesquisa.png" alt="ícone de lupa de pesquisa">
+      </div>
+    </div>
+
+    <div class="divheader">
+      <img class="icone-login" src="assets/images/login-icone-branco.png">
+      <a href="#" class="link-login" data-page="login">Entre ou Cadastre-se</a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" class="menu-link" data-page="racoes">Racoes</a></li>
+      <li><a href="#" class="menu-link" data-page="acessorios">Acessórios</a></li>
+    </ul>
+  </nav>
+
+  <div id="content" class="conteudo"></div>
+
+  <footer class="topo-footer">
+    <div>
+      <img src="assets/images/logotipo-auaupet.png" alt="Logotipo Au Au Pet">
+    </div>
+    <div class="infos-footer">
+      <div>
+        <h3 class="footer-titulo">Endereço: <span class="footer-texto">Rua Pedro Rissato, 53</span></h3>
+      </div>
+      <div>
+        <h3 class="footer-titulo">CNPJ: <span class="footer-texto">98.989.989/0001-98</span></h3>
+      </div>
+      <div>
+        <h3 class="footer-titulo">WhatsApp: <span class="footer-texto">11-98998-8998</span></h3>
+      </div>
+    </div>
+    <div class="redes-sociais">
+      <h3 class="titulo-redes-sociais">Siga Nossas Redes Sociais</h3>
+      <div class="icones-redes-sociais">
+        <img class="icone-redes-sociais" src="assets/images/icone-insta.png" alt="icone-instagram">
+        <img class="icone-redes-sociais" src="assets/images/icone-facebook.png" alt="icone-facebook">
+        <img class="icone-redes-sociais" src="assets/images/icone-youtube.png" alt="icone-youtube">
+      </div>
+    </div>
+  </footer>
+  <footer class="bottom">
+    <span class="footer-texto">&copy Au Au Pet 2023 Todos os direitos reservados</span>
+  </footer>
+</body>
+
+</html>

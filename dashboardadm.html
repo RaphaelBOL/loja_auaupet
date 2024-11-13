@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Au Au Pet - Dashboard</title>
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="divheader">
+      <a href="index.html">
+        <img src="assets/images/logotipo-auaupet.png" alt="Logotipo Au Au Pet" class="logo"> <!-- linkar página padrão -->
+      </a>
+    </div>
+
+    <div class="divheader-input">
+      <div class="input-wrapper">
+        <input class="box-pesquisa" type="text" placeholder="Encontre o produto perfeito para seu pet">
+        <img class="icone-pesquisa" src="assets/images/icone-pesquisa.png" alt="ícone de lupa de pesquisa">
+      </div>
+    </div>
+
+    <div class="divheader">
+      <div class="divheader-nome">
+        <div class="wrap-nome">
+          <a href="#" class="link-login">Usuário:</a>&nbsp;<div class="capturar-nome"></div><!--div que vai rerceber o nome preenchido no formulário-->
+        </div>
+        <a href="index.html" class="link-sair">Sair</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" class="menu-link" data-page="estoque">Estoque</a></li>
+    </ul>
+  </nav>
+
+  <main id="content-estoque" classe="conteudo-estoque"></main>
+
+  <footer class="topo-footer">
+    <div>
+      <img src="assets/images/logotipo-auaupet.png" alt="Logotipo Au Au Pet">
+    </div>
+    <div class="infos-footer">
+      <div>
+        <h3 class="footer-titulo">Endereço: <span class="footer-texto">Rua Pedro Rissato, 53</span></h3>
+      </div>
+      <div>
+        <h3 class="footer-titulo">CNPJ: <span class="footer-texto">98.989.989/0001-98</span></h3>
+      </div>
+      <div>
+        <h3 class="footer-titulo">WhatsApp: <span class="footer-texto">11-98998-8998</span></h3>
+      </div>
+    </div>
+    <div class="redes-sociais">
+      <h3 class="titulo-redes-sociais">Siga Nossas Redes Sociais</h3>
+      <div class="icones-redes-sociais">
+        <img class="icone-redes-sociais" src="assets/images/icone-insta.png" alt="icone-instagram">
+        <img class="icone-redes-sociais" src="assets/images/icone-facebook.png" alt="icone-facebook">
+        <img class="icone-redes-sociais" src="assets/images/icone-youtube.png" alt="icone-youtube">
+      </div>
+    </div>
+  </footer>
+  <footer class="bottom">
+    <span class="footer-texto">&copy Au Au Pet 2023 Todos os direitos reservados</span>
+  </footer>
+
+  <script>//script que adiciona o evento de pegar o nome através da url e adiciona o conteúdo na div com a classe .capturar-nome
+    window.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const nome = urlParams.get('nome');//variável nome armazena o parâmetro nome na url
+  
+      if (nome) {
+        const divCapturarNome = document.querySelector('.capturar-nome');
+        divCapturarNome.textContent = `${nome}`;//variável divCapturarNome, seleciona a div de classe .capturar-nome para exibir o texto capturado na url
+      }
+    });
+  </script>
+  
+</body>
+
+</html>

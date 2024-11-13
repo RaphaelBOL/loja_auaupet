@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login e Registro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="formulario">
+  <div class="tab-container"><!-- conteiner pai -->
+    <div class="tabs"> <!-- conteiner tabs -->
+      <div class="tab active" onclick="openTab(event, 'login')">Acessar conta</div>
+      <div class="tab" onclick="openTab(event, 'registro')">Criar minha conta</div>
+    </div>
+
+    <div class="form-container"><!--formulário de login-->
+      <div id="login" class="form active">
+        <h2 class="titulo-form">Acesse sua conta</h2>
+        <p class="texto-form">Não possui uma conta?<br>Cadastre-se clicando em Criar minha conta</p>
+        <form onsubmit="return login()";> <!--executa a função login ao submeter o formulário-->
+          <div class="e-mail-container">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" class="input-formulario" required><br><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" class="input-formulario" required><br><br>
+          </div>
+          <div class="senha">
+            <div class="password-container">
+              <label for="password">Senha:</label>
+              <input type="password" id="password" class="input-formulario" required>
+              <img class="mostrar-password" src="assets/images/botao-visivel.png" alt="Mostrar senha"
+                onclick="senhaVisivel('password', 'mostrar-password', 'esconder-password')"><!--altera o ícone e deixa oculto ou visícel o conteúdo da senha através da função senha visível-->
+              <img class="esconder-password" src="assets/images/botao-oculto.png" alt="Ocultar senha" 
+                onclick="senhaVisivel('password', 'mostrar-password', 'esconder-password')"><!--altera o ícone e deixa oculto ou visícel o conteúdo da senha através da função senha visível-->
+            </div>
+          </div><br>
+          <input type="submit" value="Login" class="submit">
+          <div class="senha-errada"></div>
+        </form>
+      </div>
+
+      <div id="registro" class="form"><!--formulário de cadastro-->
+        <h2 class="titulo-form">Criar uma conta</h2>
+        <p class="texto-form">Cadastre-se e aproveite <br>todas as vantagens de ser um <br>Cliente Au Au Pet</p>
+        <form onsubmit="return registro()";> <!--executa a função registro-->
+          <div class="nome-registro">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome-registro" class="input-formulario" required><br><br>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required oninput="formatarCPF()"><br><br><!--formarta o campo cep-->
+            <label for="tel">Telefone:</label>
+            <input type="text" id="tel" name="tel" required oninput="formatarTEL()"><br><br>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" class="input-formulario" required><br><br>
+          </div>
+          <div class="form-endereco">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required placeholder="Digite o CEP" onblur="buscarEndereco()"><!--executa a função buscar elemento e busca os dados do cep quando o elemento perde o foco-->
+            <br><br>
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" name="rua" readonly>
+            <br><br>
+            <label for="complemento">Nº e Complemento:</label>
+            <input type="text" id="complemento" name="complemento">
+            <br><br>
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" readonly>
+            <br><br>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" readonly>
+            <br><br>
+            <label for="uf">UF:</label>
+            <input type="text" id="uf" name="uf" readonly>
+            <br><br>
+          </div> 
+          <div class="div-criar-senha">
+            <label for="criar-senha">Crie sua senha</label>
+            <input type="password" id="criar-senha" class="input-formulario" required>
+            <img class="mostrar-criar-senha" src="assets/images/botao-visivel.png" alt="Mostrar senha"
+              onclick="senhaVisivel('criar-senha', 'mostrar-criar-senha', 'esconder-criar-senha')"><!--altera o ícone e deixa oculto ou visícel o conteúdo da senha através da função senha visível-->
+            <img class="esconder-criar-senha" src="assets/images/botao-oculto.png" alt="Ocultar senha" 
+              onclick="senhaVisivel('criar-senha', 'mostrar-criar-senha', 'esconder-criar-senha')"><!--altera o ícone e deixa oculto ou visícel o conteúdo da senha através da função senha visível-->
+          </div><br>
+          <div class="div-confirmar-senha">
+            <label for="confirmar-senha">Confirme sua senha</label>
+            <input type="password" id="confirmar-senha" class="input-formulario" required>
+            <img class="mostrar-confirmar-senha" src="assets/images/botao-visivel.png" alt="Mostrar senha"
+              onclick="senhaVisivel('confirmar-senha', 'mostrar-confirmar-senha', 'esconder-confirmar-senha')">
+            <img class="esconder-confirmar-senha" src="assets/images/botao-oculto.png" alt="Ocultar senha"
+              onclick="senhaVisivel('confirmar-senha', 'mostrar-confirmar-senha', 'esconder-confirmar-senha')">
+          </div><br>
+          <input type="submit" value="Registrar" class="submit">
+          <div class="registro-efetuado"></div><!--div para exibir o conteúdo quando o registro é confirmado-->
+          <div class="resposta-cep"></div><!--campo para exibir o conteúdo de cep invalido caso o cep não exista-->
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

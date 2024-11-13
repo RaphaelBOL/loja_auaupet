@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&family=Poppins:wght@300;400&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+header {
+    padding: 10px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #00A3B4;
+}
+
+.divheader {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divheader-nome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.wrap-nome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divheader-input {
+    width: 40%;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.box-pesquisa {
+    padding-right: 200px;
+    padding: 15px;
+    border-radius: 50px;
+    outline: transparent;
+    width: 100%;
+    box-shadow: -2px 2px 10px 0 rgba(34, 34, 34, 0.4);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.icone-pesquisa {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+}
+
+.icone-login {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.link-login,
+.capturar-nome {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    /* Adiciona posição relativa para criar para o pseudo-elemento */
+}
+
+.link-login::before,
+.capturar-nome::before,
+.link-sair::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+    /* Adiciona uma transição suave para a animação */
+}
+
+.link-login:hover::before,
+.capturar-nome:hover::before,
+.link-sair:hover::before {
+    width: 100%;
+    /* Anima o aumento da largura do traçado ao passar o mouse */
+}
+
+.link-sair{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    position: relative;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #555555;
+}
+
+nav {
+    background-color: #30CADB;
+    padding: 0px 75px 0px 75px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+a.menu-link {
+    color: #fff;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    position: relative;
+}
+
+a.menu-link::before { /* Adiciona uma transição suave para a animação dos links do menu */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+a.menu-link:hover::before { /* Anima o aumento da largura do traçado dos links do menu ao passar o mouse */
+    width: 100%;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: #ffffff;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+#content-estoque {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: #ffffff;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+.topo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #00A3B4;
+    gap: 20px;
+    padding: 40px 96px;
+}
+
+.footer-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+}
+
+span.footer-texto {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #fff;
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.titulo-redes-sociais {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+}
+
+.icone-redes-sociais {
+    width: 38px;
+    height: 38px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icone-redes-sociais:hover {
+    transform: scale(0.95);
+}
+
+footer.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #0695a5;
+    border-top: #eeeeee67 solid 1px;
+}
+
+/*css catálogo*/
+
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #0695a5;
+    align-self: center;
+}
+
+.card-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: #555555 1px solid;
+}
+
+.card-produto-imagem {
+    border-radius: inherit;
+    max-width: 180px;
+    animation: fadeIn .25s;
+}
+
+.card-produto-itens {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    animation: fadeIn .5s;
+    height: 100%;
+}
+
+.card-produto-titulo {
+    color: #0695a5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card-produto-subtitulo {
+    color: #555555;
+}
+
+.card-produto-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.card-produto-preco {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #E67500;
+}
+
+.card-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.quantidades-produtos {
+    width: 50%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #0695a5;
+}
+
+.quantidade-input {
+    width: 30%;
+    padding: 5px;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    color: #0695a5;
+    border-radius: 5px;
+    border: #555555 solid 1px;
+}
+
+.card-produto-btn {
+    width: 100%;
+    height: 35px;
+    background-color: transparent;
+    font-family: 'Montserrat' sans-serif;
+    font-size: large;
+    color: #0695a5;
+    outline: none;
+    border: 1px solid #0695a5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-produto-btn:hover,
+.card-produto-btn:focus {
+    background-color: transparent;
+    transform: scale(0.95);
+}
+
+/*css formulario*/
+
+.tab-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.tab {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border: #0695a5 1px solid;
+    border-radius: 5px 5px 0 0;
+    color: #0695a5;
+}
+
+.tab.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0695a5;
+    color: #ffffff;
+    border: none;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    border-radius: 0 0 5px 5px;
+    border: #b1b1b1 1px solid;
+    border-top: none;
+    padding: 20px;
+    width: 450px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form {
+    flex: 1;
+    display: none;
+    padding: 10px;
+    animation: fadeIn .5s;
+}
+
+.password-container {
+    /*conteiner do campo senha do formulário login*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.div-criar-senha {
+    /*conteiner do campo criar senha do formulário registro*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.div-confirmar-senha {
+    /*conteiner do campo confirmar senha do formulário registro*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.mostrar-password,
+.esconder-password,
+.mostrar-criar-senha,
+.esconder-criar-senha,
+.mostrar-confirmar-senha,
+.esconder-confirmar-senha {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+}
+
+.esconder-password,
+.esconder-criar-senha,
+.esconder-confirmar-senha {
+    display: none;
+}
+
+.form.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: fadeIn .5s;
+}
+
+.titulo-form {
+    text-align: center;
+    color: #E67500;
+    padding: 0 0 10px 0;
+}
+
+.texto-form {
+    text-align: center;
+    padding: 0 0 15px 0;
+    font-size: 14px;
+    color: #8f8f8f;
+}
+
+label {
+    color: #0695a5;
+    font-size: 18px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: #b1b1b1 1px solid;
+    outline: none;
+    color: #555555;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.senha {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.senha-errada,
+.registro-efetuado,
+.resposta-cep {
+    color: #E67500;
+}
+
+.submit {
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    border: #0695a5 1px solid;
+    color: #0695a5;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+.submit:hover,
+.submit:focus {
+    background-color: #0695a5;
+    transform: scale(0.95);
+    color: #ffffff;
+}
+
+/*css lista de produtos*/
+
+.containerTabela {
+    animation: fadeIn .5s;
+}
+
+.containerTabela h1 {
+    text-align: center;
+}
+
+td,
+th {
+    /* Bordas */
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #555555;
+    padding: 8px;
+}
+
+th {
+    font-weight: 400;
+}
+
+tr.linha1 {
+    background-color: #c0c0c0;
+}
+
+tr.linha2 {
+    background-color: #dadada;
+}
+
+.cabecalho {
+    /*Cor dos descritivos */
+    color: #ffffff;
+    background-color: #00A3B4;
+}
+
+td:nth-child(5) {
+    /* Cor campo preço */
+    font-family: 'Poppins', sans-serif;
+    background-color: #E67500;
+}
+
+.tabela {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/*código responsivo para telas inferiores a 1148px*/
+
+@media (max-width: 1147px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .divheader-input {
+        width: 100%;
+        order: 3;
+        margin-top: 10px;
+    }
+
+    .divheader-input .input-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box-pesquisa {
+        padding-right: 50px;
+    }
+
+    .icone-pesquisa {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        margin-top: 0;
+    }
+
+    .divheader {
+        width: 100%;
+        order: 4;
+        margin-top: 10px;
+    }
+
+    .icone-login {
+        margin-right: 15px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+
+    .card-produto {
+        width: 350px;
+    }
+
+    .containerTabela {
+        padding: 0 20px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    #content-estoque { /*área do conteúdo exibido na página principal*//*ajusta tabela de forma responsiva*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: auto;
+        padding: 0 20 25 20px;
+        background-color: #ffffff;
+        gap: 20px;
+        min-height: 100vh;
+    }
+
+    .containerTabela h1 {
+        text-align: start;
+    }
+
+    .topo-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: #00A3B4;
+        gap: 20px;
+        padding: 40px 40px;
+    }
+
+    .infos-footer {
+        text-align: center;
+    }
+
+    .footer-titulo {
+        text-align: center;
+    }
+
+    footer.bottom {
+        padding: 15px 0;
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 400px;
+    }
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translatey(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*fim do código*/
