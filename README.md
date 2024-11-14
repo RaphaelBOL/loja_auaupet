@@ -63,12 +63,12 @@ A estrutura do site inclui uma página principal (`index.html`) e outras seis p�
 
 1. Clone o repositório:
   ```bash
-  git clone https://github.com/seuusuario/nomedoprojeto.git
+  git clone https://github.com/RaphaelBOL/loja_auaupet
   ```
 
 2. Navegue até a pasta do projeto
   ```bash
-  cd nomedoprojeto
+  cd "LOJA VIRTUAL AU AU PET"
   ```
 
 3. Abra o arquivo index.html em um navegador para visualizar o site.
